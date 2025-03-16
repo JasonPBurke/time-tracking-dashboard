@@ -85,4 +85,108 @@ img {
   font-style: normal;
 }
 
+body {
+  background-color: hsl(226, 43%, 10%);
+  display: flex;
+  place-content: center;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 4rem 1.5rem;
+}
+
+#avatar {
+  border-radius: 50%;
+  border: 3px solid rgb(219, 218, 236);
+  max-width: 4.5rem;
+}
+
+.user-card {
+  background-color: hsl(235, 46%, 20%);
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  color: hsl(236, 100%, 87%);
+}
+.user-card .user-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 1rem;
+}
+.user-card .user-info p {
+  font-size: 1rem;
+  line-height: 1.25;
+  opacity: 0.75;
+}
+.user-card .user-info p span {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.895);
+}
+.user-card .navigation-list > ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25rem 1.75rem;
+  letter-spacing: 0.02rem;
+  opacity: 0.5;
+  font-size: 1.2rem;
+}
+
+.card-container {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.card {
+  border-radius: 1rem;
+  color: hsl(236, 100%, 87%);
+  height: 10rem;
+  display: grid;
+  align-items: end;
+}
+.card .card-content {
+  height: 75%;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 1rem;
+  padding: 1rem;
+  z-index: 1;
+}
+
+.card-header,
+.time-daily,
+.time-weekly,
+.time-monthly {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.time-weekly,
+.time-monthly {
+  display: none;
+}
+
+.card-header > img {
+  max-width: 2rem;
+}
+
+.work-card {
+  background-color: hsl(15, 100%, 70%);
+  position: relative;
+  overflow: hidden;
+}
+.work-card > img {
+  position: absolute;
+  top: -0.75rem;
+  right: 0.75rem;
+  width: 5rem;
+}
+
 /*# sourceMappingURL=styles.css.map */

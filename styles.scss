@@ -65,7 +65,7 @@ img {
 
 // Primary Colors
 $color-blue: hsl(246, 80%, 60%);
-$color-light-red: hsl(15, 100%, 70%);
+$color-light-orange: hsl(15, 100%, 70%);
 $color-soft-blue: hsl(195, 74%, 62%);
 $color-light-red: hsl(348, 100%, 68%);
 $color-lime-green: hsl(145, 58%, 55%);
@@ -101,4 +101,121 @@ $card-title-font-size: 18px;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+}
+
+body {
+  background-color: $color-very-dark-blue;
+  display: flex;
+  place-content: center;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 4rem 1.5rem;
+}
+
+#avatar {
+  border-radius: 50%;
+  border: 3px solid rgb(219, 218, 236);
+  max-width: 4.5rem;
+}
+
+.user-card {
+  background-color: $color-dark-blue;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  color: $color-pale-blue;
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: $color-blue;
+    border-radius: 1rem;
+
+    p {
+      font-size: 1rem;
+      line-height: 1.25;
+      opacity: 0.75;
+
+      span {
+        font-size: 1.5rem;
+        color: rgba(255, 255, 255, 0.895);
+      }
+    }
+  }
+
+  .navigation-list > ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25rem 1.75rem;
+    letter-spacing: 0.02rem;
+    opacity: 0.5;
+    font-size: 1.2rem;
+  }
+}
+
+// .active {
+//   color: white;
+//   opacity: 1;
+// }
+
+.card-container {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.card {
+  // background-color: $color-dark-blue;
+  border-radius: 1rem;
+  color: $color-pale-blue;
+  height: 10rem;
+  display: grid;
+  align-items: end;
+
+  .card-content {
+    height: 75%;
+    background-color: $color-dark-blue;
+    border-radius: 1rem;
+    padding: 1rem;
+    z-index: 1;
+  }
+}
+
+.card-header,
+.time-daily,
+.time-weekly,
+.time-monthly {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.time-weekly,
+.time-monthly {
+  display: none;
+}
+
+.card-header > img {
+  max-width: 2rem;
+}
+
+.work-card {
+  background-color: $color-light-orange;
+  position: relative;
+  overflow: hidden;
+
+  > img {
+    position: absolute;
+    top: -0.75rem;
+    right: 0.75rem;
+    width: 5rem;
+    // transform: translate(50%, -50%);
+  }
 }
