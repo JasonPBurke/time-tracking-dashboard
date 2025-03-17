@@ -51,6 +51,7 @@ button {
   line-height: inherit;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 table {
@@ -99,6 +100,10 @@ main {
   padding: 4rem 1.5rem;
 }
 
+button {
+  background: none;
+}
+
 #avatar {
   border-radius: 50%;
   border: 3px solid rgb(219, 218, 236);
@@ -134,8 +139,11 @@ main {
   justify-content: space-between;
   padding: 1.25rem 1.75rem;
   letter-spacing: 0.02rem;
-  opacity: 0.5;
   font-size: 1.2rem;
+}
+.user-card .navigation-list > ul li a[data-active=true] {
+  color: white;
+  opacity: 1;
 }
 
 .card-container {
@@ -146,16 +154,24 @@ main {
 .card {
   border-radius: 1rem;
   color: hsl(236, 100%, 87%);
-  height: 10rem;
+  height: 10.25rem;
   display: grid;
   align-items: end;
+  position: relative;
+  overflow: hidden;
+}
+.card > img {
+  position: absolute;
+  top: -0.5rem;
+  right: 0.75rem;
+  width: 5rem;
 }
 
 .card-content {
   height: 75%;
   background-color: hsl(235, 46%, 20%);
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   z-index: 1;
 }
 
@@ -165,6 +181,10 @@ main {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
+}
+
+.card-header {
+  margin: 0.5rem 0 0 0;
 }
 
 .card-header h2 {
@@ -189,14 +209,42 @@ main {
 
 .work-card {
   background-color: hsl(15, 100%, 70%);
-  position: relative;
-  overflow: hidden;
 }
-.work-card > img {
-  position: absolute;
-  top: -0.75rem;
-  right: 0.75rem;
-  width: 5rem;
+
+.play-card {
+  background-color: hsl(195, 74%, 62%);
+}
+.play-card img {
+  top: -0.25rem;
+}
+
+.study-card {
+  background-color: hsl(348, 100%, 68%);
+}
+.study-card img {
+  top: -0.25rem;
+}
+
+.exercise-card {
+  background-color: hsl(145, 58%, 55%);
+}
+.exercise-card img {
+  top: 0rem;
+}
+
+.social-card {
+  background-color: hsl(264, 64%, 52%);
+}
+.social-card img {
+  top: -1rem;
+}
+
+.self-care-card {
+  background-color: hsl(43, 84%, 65%);
+}
+.self-care-card img {
+  top: -0.5rem;
+  width: 4.25rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

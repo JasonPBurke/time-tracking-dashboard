@@ -51,6 +51,7 @@ button {
   line-height: inherit;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 table {
   border-collapse: collapse;
@@ -117,6 +118,10 @@ main {
   padding: 4rem 1.5rem;
 }
 
+button {
+  background: none;
+}
+
 #avatar {
   border-radius: 50%;
   border: 3px solid rgb(219, 218, 236);
@@ -155,15 +160,14 @@ main {
     justify-content: space-between;
     padding: 1.25rem 1.75rem;
     letter-spacing: 0.02rem;
-    opacity: 0.5;
     font-size: 1.2rem;
+
+    li a[data-active='true'] {
+      color: white;
+      opacity: 1;
+    }
   }
 }
-
-// .active {
-//   color: white;
-//   opacity: 1;
-// }
 
 .card-container {
   display: grid;
@@ -171,19 +175,27 @@ main {
 }
 
 .card {
-  // background-color: $color-dark-blue;
   border-radius: 1rem;
   color: $color-pale-blue;
-  height: 10rem;
+  height: 10.25rem;
   display: grid;
   align-items: end;
+  position: relative;
+  overflow: hidden;
+
+  > img {
+    position: absolute;
+    top: -0.5rem;
+    right: 0.75rem;
+    width: 5rem;
+  }
 }
 
 .card-content {
   height: 75%;
   background-color: $color-dark-blue;
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   z-index: 1;
 }
 
@@ -193,6 +205,10 @@ main {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
+}
+
+.card-header {
+  margin: 0.5rem 0 0 0;
 }
 
 .card-header {
@@ -219,13 +235,40 @@ main {
 
 .work-card {
   background-color: $color-light-orange;
-  position: relative;
-  overflow: hidden;
+}
 
-  > img {
-    position: absolute;
-    top: -0.75rem;
-    right: 0.75rem;
-    width: 5rem;
+.play-card {
+  background-color: $color-soft-blue;
+  img {
+    top: -0.25rem;
+  }
+}
+
+.study-card {
+  background-color: $color-light-red;
+  img {
+    top: -0.25rem;
+  }
+}
+
+.exercise-card {
+  background-color: $color-lime-green;
+  img {
+    top: 0rem;
+  }
+}
+
+.social-card {
+  background-color: $color-violet;
+  img {
+    top: -1rem;
+  }
+}
+
+.self-care-card {
+  background-color: $color-soft-orange;
+  img {
+    top: -0.5rem;
+    width: 4.25rem;
   }
 }
