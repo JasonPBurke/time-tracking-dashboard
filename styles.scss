@@ -177,33 +177,44 @@ main {
   height: 10rem;
   display: grid;
   align-items: end;
+}
 
-  .card-content {
-    height: 75%;
-    background-color: $color-dark-blue;
-    border-radius: 1rem;
-    padding: 1rem;
-    z-index: 1;
-  }
+.card-content {
+  height: 75%;
+  background-color: $color-dark-blue;
+  border-radius: 1rem;
+  padding: 1rem;
+  z-index: 1;
 }
 
 .card-header,
-.time-daily,
-.time-weekly,
-.time-monthly {
+.time {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
 }
 
-.time-weekly,
+.card-header {
+  h2 {
+    font-size: $card-title-font-size;
+    color: white;
+  }
+}
+
+.time p:first-of-type {
+  font-size: 2rem;
+  font-weight: 300;
+  color: white;
+}
+
+.time-daily,
 .time-monthly {
   display: none;
 }
 
-.card-header > img {
-  max-width: 2rem;
+.ellipsis {
+  max-width: 1.5rem;
 }
 
 .work-card {
@@ -216,6 +227,5 @@ main {
     top: -0.75rem;
     right: 0.75rem;
     width: 5rem;
-    // transform: translate(50%, -50%);
   }
 }
