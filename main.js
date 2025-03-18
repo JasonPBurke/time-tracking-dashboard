@@ -1,4 +1,3 @@
-const navList = document.querySelector('.navigation-list');
 const navItems = document.querySelectorAll('.navigation-list li');
 const timeElements = document.querySelectorAll('.time');
 
