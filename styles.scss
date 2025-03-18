@@ -157,6 +157,10 @@ button {
     font-size: 1.2rem;
     color: $color-desaturated-blue;
 
+    li:hover {
+      color: white;
+    }
+
     li a[data-active='true'] {
       color: white;
       opacity: 1;
@@ -192,6 +196,11 @@ button {
   border-radius: 1rem;
   padding: 1rem 1.5rem;
   z-index: 1;
+  cursor: pointer;
+}
+
+.card-content:hover {
+  background-color: hsl(236, 41%, 34%);
 }
 
 .card-header,
@@ -204,12 +213,12 @@ button {
 
 .card-header {
   margin: 0.5rem 0 0 0;
-}
-
-.card-header {
   h2 {
     font-size: $card-title-font-size;
     color: white;
+  }
+  button:hover {
+    filter: sepia(1) grayscale(1);
   }
 }
 
