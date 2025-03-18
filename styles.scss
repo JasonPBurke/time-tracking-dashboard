@@ -161,10 +161,10 @@ button {
       color: white;
     }
 
-    li a[data-active='true'] {
-      color: white;
-      opacity: 1;
-    }
+    // li a[data-active='true'] {
+    //   color: white;
+    //   opacity: 1;
+    // }
   }
 }
 
@@ -277,7 +277,13 @@ button {
   display: none;
 }
 
-.time[data-active='true'] {
+// .time[data-active='true'] {
+//   display: flex;
+// }
+
+.active {
+  color: white;
+  opacity: 1;
   display: flex;
 }
 
@@ -330,7 +336,11 @@ button {
     font-size: 3rem;
   }
 
-  .time[data-active='true'] {
+  // .time[data-active='true'] {
+  //   display: block;
+  // }
+
+  .active {
     display: block;
   }
 }

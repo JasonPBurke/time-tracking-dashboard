@@ -140,10 +140,6 @@ button {
 .user-card .navigation-list > ul li:hover {
   color: white;
 }
-.user-card .navigation-list > ul li a[data-active=true] {
-  color: white;
-  opacity: 1;
-}
 
 .user-name {
   font-size: 1.5rem;
@@ -252,7 +248,9 @@ button {
   display: none;
 }
 
-.time[data-active=true] {
+.active {
+  color: white;
+  opacity: 1;
   display: flex;
 }
 
@@ -297,7 +295,7 @@ button {
   .time p:first-of-type {
     font-size: 3rem;
   }
-  .time[data-active=true] {
+  .active {
     display: block;
   }
 }
