@@ -1,19 +1,37 @@
 const navList = document.querySelector('.navigation-list');
-const navItems = document.querySelectorAll('.navigation-list li a');
+const navItems = document.querySelectorAll('.navigation-list li');
 const timeElements = document.querySelectorAll('.time');
 
-navList.addEventListener('click', (e) => {
-  navItems.forEach((item) => {
-    item.classList.remove('active');
-  });
-  e.target.classList.add('active');
+//   navItems.forEach((item) => {
+//     item.classList.remove('active');
+//   });
+//   e.target.classList.add('active');
 
-  timeElements.forEach((time) => {
-    time.classList.remove('active');
+//   timeElements.forEach((time) => {
+//     time.classList.remove('active');
 
-    if (time.classList.contains(`time-${e.target.textContent.toLowerCase()}`)) {
-      time.classList.add('active');
-    }
+//     if (time.classList.contains(`time-${e.target.textContent.toLowerCase()}`)) {
+//       time.classList.add('active');
+//     }
+//   });
+// });
+
+navItems.forEach((item) => {
+  item.addEventListener('click', (e) => {
+    navItems.forEach((item) => {
+      item.classList.remove('active');
+    });
+    item.classList.add('active');
+
+    timeElements.forEach((time) => {
+      time.classList.remove('active');
+
+      if (
+        time.classList.contains(`time-${e.target.textContent.toLowerCase()}`)
+      ) {
+        time.classList.add('active');
+      }
+    });
   });
 });
 
